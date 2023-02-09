@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Item } from 'src/app/models/item';
 import { ItemService } from 'src/app/services/item.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-item',
@@ -30,7 +31,7 @@ export class AddItemComponent implements OnInit {
     if (this.addItemForm.valid) {
       this.itemService.createItem(formData).subscribe({
         next: (res) => {
-          alert('item added successfully')
+          Swal.fire('Item added successfully')
           this.router.navigate(['/'])
         },
         error: (err) => {
@@ -39,6 +40,12 @@ export class AddItemComponent implements OnInit {
         }
       })
 
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Invalid Form...',
+        text: 'Please ensure that all required fields are filled',
+      })
     }
 
 

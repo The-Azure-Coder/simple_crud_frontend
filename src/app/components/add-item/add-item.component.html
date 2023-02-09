@@ -1,39 +1,42 @@
-<div class="form-con">
-  <div class="form-img">
-  </div>
+<div class="line-background">
 
-  <form method="post" [formGroup]="addItemForm" (submit)="onSubmit()">
-    <div class="heading">
-      <h2 class="form-title">Add An item</h2>
-      <span routerLink="/" class="close-btn"><img src="../assets/images/close.png" alt=""></span>
+  <div class="form-con">
+    <div class="form-img">
     </div>
 
-    <mat-form-field class="form-field" hideRequiredMarker appearance="outline">
-      <mat-label>Name</mat-label>
-      <input matInput name="itemName" formControlName="itemName" required>
-      <mat-hint>Please Enter Item Name</mat-hint>
-      <mat-error *ngIf="addItemForm.get('itemName')?.hasError('required')&& addItemForm.get('itemName')?.touched">Item Name is required</mat-error>
-    </mat-form-field>
+    <form method="post" [formGroup]="addItemForm" (submit)="onSubmit()">
+      <div class="heading">
+        <h2 class="form-title">Add An item</h2>
+        <span routerLink="/" class="close-btn"><img src="../assets/images/close.png" alt=""></span>
+      </div>
 
-    <mat-form-field class="form-field" hideRequiredMarker appearance="outline">
-      <mat-label>Price</mat-label>
-      <input matInput name="price" formControlName="price" required>
-      <mat-hint>Please Enter Item Name</mat-hint>
-      <mat-error *ngIf="addItemForm.get('price')?.hasError('required')&& addItemForm.get('price')?.touched">Price of item is required</mat-error>
-    </mat-form-field>
+      <mat-form-field class="form-field" hideRequiredMarker appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput name="itemName" formControlName="itemName" required>
+        <mat-hint>Please Enter Item Name</mat-hint>
+        <mat-error *ngIf="addItemForm.get('itemName')?.hasError('required')&& addItemForm.get('itemName')?.touched">Item Name is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-field" hideRequiredMarker appearance="outline">
+        <mat-label>Price</mat-label>
+        <input matInput name="price" formControlName="price" required>
+        <mat-hint>Please Enter Item Name</mat-hint>
+        <mat-error *ngIf="addItemForm.get('price')?.hasError('required')&& addItemForm.get('price')?.touched">Price of item is required</mat-error>
+      </mat-form-field>
 
 
-    <mat-form-field hideRequiredMarker class="textarea-field" appearance="outline">
-      <mat-label>item Description</mat-label>
-      <textarea type="text" rows="6" name="description" formControlName="description" matInput></textarea>
-      <mat-hint>Enter item description</mat-hint>
+      <mat-form-field hideRequiredMarker class="textarea-field" appearance="outline">
+        <mat-label>item Description</mat-label>
+        <textarea type="text" rows="6" name="description" formControlName="description" matInput></textarea>
+        <mat-hint>Enter item description</mat-hint>
 
-      <mat-error *ngIf="addItemForm.get('description')?.hasError('required') && addItemForm.get('description')?.touched">
-        item description is required</mat-error>
-    </mat-form-field>
+        <mat-error *ngIf="addItemForm.get('description')?.hasError('required') && addItemForm.get('description')?.touched">
+          item description is required</mat-error>
+      </mat-form-field>
 
-    <button class="submit-btn">Add Item</button>
+      <button class="submit-btn">Add Item</button>
 
-  </form>
+    </form>
 
+  </div>
 </div>
