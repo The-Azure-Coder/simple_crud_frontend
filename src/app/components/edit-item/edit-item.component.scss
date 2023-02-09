@@ -1,0 +1,67 @@
+.form-con{
+    display: flex;
+    justify-content: center;
+    box-shadow: 9px 9px 5px 0px rgba(0,0,0,0.06);
+    -webkit-box-shadow: 9px 9px 5px 0px rgba(0,0,0,0.06);
+    -moz-box-shadow: 9px 9px 5px 0px rgba(0,0,0,0.06);
+    width: fit-content;
+    margin: 12rem auto;
+
+    .heading{
+        display: flex;
+     
+
+        .close-btn{
+            margin-left: 14rem;
+            cursor: pointer;
+
+            img{
+                width: 25px;
+            }
+
+        }
+    }
+
+    .form-img{
+        background-image: radial-gradient(circle at 77% 43%, rgba(168, 168, 168,0.04) 0%, rgba(168, 168, 168,0.04) 50%,rgba(10, 10, 10,0.04) 50%, rgba(10, 10, 10,0.04) 100%),radial-gradient(circle at 33% 65%, rgba(248, 248, 248,0.04) 0%, rgba(248, 248, 248,0.04) 50%,rgba(228, 228, 228,0.04) 50%, rgba(228, 228, 228,0.04) 100%),radial-gradient(circle at 92% 79%, rgba(152, 152, 152,0.04) 0%, rgba(152, 152, 152,0.04) 50%,rgba(28, 28, 28,0.04) 50%, rgba(28, 28, 28,0.04) 100%),radial-gradient(circle at 91% 13%, rgba(41, 41, 41,0.04) 0%, rgba(41, 41, 41,0.04) 50%,rgba(214, 214, 214,0.04) 50%, rgba(214, 214, 214,0.04) 100%),linear-gradient(90deg, rgb(11, 127, 96),rgb(139, 205, 191));
+        height: 30rem;
+        width: 20rem;
+       
+
+    }
+    
+            form{
+                padding: 15px;
+
+                .form-title{
+                    color: teal;
+                }
+    
+            
+   
+
+            .form-field{
+                display: block;
+                width: 22rem;
+                margin-bottom: .8rem;
+            }
+
+            .textarea-field{
+                display: block;
+                width: 22rem;
+                
+            }
+
+            .submit-btn{
+                margin-top: 2rem;
+                background-color: teal;
+                border: none;
+                color: white;
+                padding: 12px;
+                width: 22rem;
+            }
+        }
+
+            
+}
+
